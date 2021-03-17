@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>TIWP - lab 9</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div id="gameField">
+        <div class="row">
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+            <div class="field">
+                <img src="img/target.png" class="target">
+            </div>
+        </div>
+    </div>
+    <div id="info">
+        <h1>Informacje oraz zarządzanie grą</h1>
+        <ul>
+            <li>Wynik: <span id="resultText">0</span></li>
+            <li>Czas: <span id="timeText">0</span>s</li>
+            <li>Poziom trudności: <span id="modeText">Łatwy</span></li>
+            <li>Stan: <span id="statusText">Jeszcze nie rozpoczęto</span></li>
+        </ul>
+
+        <button class="ui-button difficultyButton" id="playButton">Zagraj</button>
+
+        <div id="difficultySet">
+            <h2>Zmiana poziomu trudności:</h2>
+            <button class="ui-button difficultyButton" id="easyButton">Łatwy</button>
+            <button class="ui-button difficultyButton" id="normalButton">Normalny</button>
+            <button class="ui-button difficultyButton" id="hardButton">Trudny</button>
+        </div>
+    </div>
+
+    <div id="hammer">
+        <img src="img/hammer.png">
+    </div>
+</body>
+</html>

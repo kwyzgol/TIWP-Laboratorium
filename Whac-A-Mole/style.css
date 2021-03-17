@@ -1,0 +1,48 @@
+#hammer
+{
+    position: absolute;
+}
+
+#gameField
+{
+    background-color: #2be32b;
+    float: left;
+}
+
+.field
+{
+    margin: 10px;
+    float: left;
+    width: 150px;
+    height: 125px;
+
+    border-bottom-color: #865204;
+    border-bottom-style: solid;
+    border-bottom-width: 20px;
+
+    align-items: center;
+}
+
+.row
+{
+    clear: both;
+}
+
+#info
+{
+    font-family: Verdana, Arial, sans-serif;
+    float: left;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+h1
+{
+    font-size: 35px;
+}
+
+#playButton
+{
+    font-size: 20px;
+    margin: 40px;;
+}

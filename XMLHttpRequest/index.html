@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>TIWP - lab 6</title>
+    <style>
+        body
+        {
+            background-color: black;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+        table, td, th
+        {
+            padding: 10px;
+            border: 3px solid white;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Zamówienia</h1>
+        <table id="table">
+            <tr>
+                <th>Nr</th>
+                <th>Osoba</th>
+                <th>Ciasto</th>
+                <th>Wielkość</th>
+                <th>Składnik 1</th>
+                <th>Składnik 2</th>
+                <th>Składnik 3</th>
+                <th>Sos</th>
+                <th>Cena</th>
+            </tr>
+        </table>
+        <h2>Koszt:</h2>
+        <ul id="listaKoszty">
+        </ul>
+        <h2>Skladniki:</h2>
+        <ul id="listaSkladniki">
+        </ul>
+    </div>
+    <script type="text/javascript">
+
+        var requester;
+
+        var skladniki= [
+            {
+                name: "ser",
+                count: 0
+            },
+            {
+                name: "szynka",
+                count: 0
+            },
+            {
+                name: "kurczak",
+                count: 0
+            },
+            {
+                name: "brokuly",
+                count: 0
+            },
+            {
+                name: "pomidor",
+                count: 0
+            },
+            {
+                name: "pieczarki",
+                count: 0
+            },
+            {
+                name: "salami",
+                count: 0
+            },
+            {
+                name: "cebula",
+                count: 0
+            },
+            {
+                name: "oliwki",
+                count: 0
+            },
+            {
+                name: "papryka",
+                count: 0
+            }
+        ]
+        var osoby = [];
+
+
+        function loadText()
+        {
+            requester = new XMLHttpRequest();
+
+            requester.onreadystatechange=processText;
+            requester.open("GET", "pizza.xml", true);
+            requester.send(null);
+        }
+
+        function processText()
+        {
+            if(requester.readyState == 4)
+                if(requester.status == 200)
+                {
+                    var out = document.getElementById("table");
+                    var xmldoc = requester.responseXML;
+                    var zamowienia = xmldoc.getElementsByTagName('zamowienie');
+
+                    for (var i = 0; i < zamowienia.length; i++)
+                    {
+                        var tmpRow = out.insertRow();
+                        var tmpCell = tmpRow.insertCell();
+                        tmpCell.innerText = i + 1;
+
+                        //wypelnianie tabeli
+                        for (var j = 0; j < zamowienia[i].children.length; j++)
+                        {
+                            var tmpCell = tmpRow.insertCell();
+                            tmpCell.innerText = zamowienia[i].children[j].firstChild.nodeValue;
+                            if(j == 3 || j == 4 || j == 5) szukajSkladniki(zamowienia[i].children[j].firstChild.nodeValue);
+                        }
+
+                        //zapisywanie informacji o osobie (cena zamówienia)
+                        osoby.push({osoba: zamowienia[i].children[0].firstChild.nodeValue, cena: zamowienia[i].children[7].firstChild.nodeValue});
+                    }
+
+                    //wypisanie kosztów
+                    var sumaKosztow = 0;
+                    var lista = document.getElementById("listaKoszty");
+
+                    for(var i = 0; i < osoby.length; i++)
+                    {
+                        var tmp = document.createElement("li");
+                        tmp.innerText = osoby[i].osoba + ": " + osoby[i].cena;
+                        lista.appendChild(tmp);
+                        sumaKosztow += parseInt(osoby[i].cena);
+                    }
+                    var tmp = document.createElement("li");
+                    tmp.innerHTML = "<b><ins>Suma zamówień: "+ sumaKosztow +"</ins></b>";
+                    lista.appendChild(tmp);
+
+                    //wypisanie składników
+                    for(var i = 0; i < skladniki.length; i++)
+                    {
+                        var lista = document.getElementById("listaSkladniki");
+                        var tmp = document.createElement("li");
+                        tmp.innerText = skladniki[i].name + ": " + skladniki[i].count;
+                        lista.appendChild(tmp);
+                    }
+                }
+        }
+
+        function szukajSkladniki(skladnik)
+        {
+            for(var i = 0; i < skladniki.length; i++)
+            {
+                if(skladnik == skladniki[i].name) skladniki[i].count++;
+            }
+        }
+
+        window.addEventListener("load", loadText, false);
+
+    </script>
+</body>
+</html>

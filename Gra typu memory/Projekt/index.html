@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Znajdź pary elementów</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="scripts/scriptIndex.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container" hidden>
+
+    <div class="right">
+        <button id="button-info" class="ui-button">Informacje</button>
+    </div>
+
+    <div class="left">
+        <button id="button-result" class="ui-button">Wyniki</button>
+    </div>
+
+    <div>
+        <h1 class="center">Znajdź pary elementów</h1>
+        <div>
+            <h2 class="center">Wybierz ilość par kart:</h2>
+            <input id="pair-number" type="range" min = 2 max = 32 value = 0>
+            <p class="center"><b>Pary:&nbsp</b><span id="pair-text">2</span></p>
+            <p class="center"><b>Liczba kart:&nbsp</b><span id="cards-text">4</span></p>
+        </div>
+        <div class="center">
+            <button id="button-play" class="ui-button">Zagraj</button>
+        </div>
+    </div>
+</div>
+<div id="info-dialog" hidden>
+    <p><b>Nazwa aplikacji:</b> Znajdź pary elementów</p>
+    <p><b>Wersja:</b> 1.0</p>
+    <p><b>Opis:</b> Aplikacja polega na znajdowaniu par takich samych kart przy jak najmniejszej liczbie wykonanych ruchów. Liczbę par można dostosować: minimalna liczba to 2, a maksymalna to 32.</p>
+    <p><b>Autor:</b> Kamil Wyżgoł, grupa ISI3</p>
+    <p><b>TIWP 2020/2021</b></p>
+    <br>
+    <p>Wszystkie użyte grafiki pochodzą z <a href="https://icons8.com/" target="_blank">https://icons8.com/</a>.</p>
+</div>
+</body>
+</html>

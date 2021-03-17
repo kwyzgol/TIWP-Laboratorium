@@ -1,0 +1,22 @@
+ [
+   {"pl": "pies", "eng": "dog"},
+   {"pl": "kot", "eng": "cat"},
+   {"pl": "mysz", "eng": "mouse"},
+   {"pl": "chomik", "eng": "hamster"},
+   {"pl": "żyrafa", "eng": "giraffe"},
+   {"pl": "lew", "eng": "lion"},
+   {"pl": "komputer", "eng": "computer"},
+   {"pl": "klawiatura", "eng": "keyboard"},
+   {"pl": "gra", "eng": "game"},
+   {"pl": "książka", "eng": "book"},
+   {"pl": "woda", "eng": "water"},
+   {"pl": "klucz", "eng": "key"},
+   {"pl": "produkt", "eng": "product"},
+   {"pl": "herbata", "eng": "tea"},
+   {"pl": "kawa", "eng": "coffee"},
+   {"pl": "szklanka / szkło", "eng": "glass"},
+   {"pl": "Polska", "eng": "Poland"},
+   {"pl": "Niemcy", "eng": "Germany"},
+   {"pl": "Zjednoczone Królestwo", "eng": "United Kingdom"},
+   {"pl": "zamieć", "eng": "blizzard"}
+ ]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title id="titleText">Nauka</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/scriptNauka.js"></script>
+</head>
+<body>
+<div id="container" hidden>
+    <div id="infoButtonDiv">
+        <button id="infoButton" class="ui-button">O programie</button>
+    </div>
+
+    <div id="content">
+        <h1><span id="headerText" class="modeSelect">Nauka</span></h1>
+
+        <div class="modeSelect">
+            <button id="translateButton" class="ui-button">Pokaż po angielsku</button>
+            <button id="exitButton" class="ui-button">Zakończ</button>
+        </div>
+
+        <div>
+            <b><span id="wordTitle">Wyraz:</span></b><br>
+            <span id="wordText" class="modeSelect">-</span>
+            <input type="text" hidden>
+        </div>
+
+        <div id="buttonStart">
+            <button  class="ui-button">Dalej</button>
+        </div>
+    </div>
+</div>
+
+<div id="info" hidden>
+    <p><b>Nazwa aplikacji:</b> Nauka języka angielskiego</p>
+    <p><b>Wersja:</b> 1.0</p>
+    <p><b>Autor:</b> Kamil Wyżgoł, grupa ISI3</p>
+    <p><b>TIWP 2020/2021</b></p>
+</div>
+<div id="confirm" hidden></div>
+</body>
+</html>

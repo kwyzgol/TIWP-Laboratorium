@@ -1,0 +1,78 @@
+body
+{
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#container
+{
+    padding: 10px;
+    padding-left: 30px;
+    float: left;
+    border-style: unset;
+}
+
+#infoButtonDiv
+{
+    float: right;
+    border-style: unset;
+}
+
+#content
+{
+    clear: both;
+}
+
+div
+{
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 10px;
+}
+
+#buttonStart
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-style: unset;
+}
+
+#buttonStart button
+{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.ui-dialog-buttonset
+{
+    padding: 0px;
+    border-style: unset;
+    margin-bottom: 0px;
+}
+
+.ui-dialog-buttonpane
+{
+    border-style: unset;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.modeSelect
+{
+    display:flex;
+    justify-content:center;
+    margin: 5px;
+}
+
+input
+{
+    font-size: 21px;
+}

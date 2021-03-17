@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Nauka języka angielskiego</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/scriptIndex.js"></script>
+</head>
+<body>
+    <div id="container" hidden>
+        <div id="infoButtonDiv">
+            <button id="infoButton" class="ui-button">O programie</button>
+        </div>
+
+        <div id="content">
+            <h1>Nauka języka angielskiego</h1>
+
+            <div>
+                <span class="modeSelect">
+                    <b>Tłumaczenie:</b> <span id="lang">Z polskiego na angielski</span>
+                </span>
+                <span class="modeSelect">
+                    <button id="modePL" class="ui-button">Z polskiego na angielski</button>
+                    <button id="modeENG" class="ui-button">Z angielskiego na polski</button>
+                </span>
+            </div>
+
+            <div>
+                <span class="modeSelect">
+                    <b>Tryb:</b> <span id="mode">Nauka</span>
+                </span>
+                <span class="modeSelect">
+                    <button id="modeLearn" class="ui-button">Nauka</button>
+                    <button id="modeTest" class="ui-button">Test</button>
+                </span>
+            </div>
+
+            <div id="buttonStart">
+                <button  class="ui-button">Rozpocznij</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="info" hidden>
+        <p><b>Nazwa aplikacji:</b> Nauka języka angielskiego</p>
+        <p><b>Wersja:</b> 1.0</p>
+        <p><b>Autor:</b> Kamil Wyżgoł, grupa ISI3</p>
+        <p><b>TIWP 2020/2021</b></p>
+    </div>
+</body>
+</html>
